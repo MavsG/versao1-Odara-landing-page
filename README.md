@@ -1,4 +1,5 @@
 # 🌟 Odara OSC | Cultura, Educação e Juventudes
+link Rápido: https://mavsg.github.io/versao1-Odara-landing-page/
 
 > Transformando realidades através da arte, da educação e do protagonismo juvenil.
 
