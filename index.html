@@ -26,26 +26,86 @@
 </head>
 <body class="bg-[#faf8f5] dark:bg-[#1a0709] text-[#2b0b0e] dark:text-[#f3ede2] transition-colors duration-300">
 
-    <!-- Configurações Rápidas de Edição para a Equipe -->
+    <!-- 
+      ========================================================================
+      PAINEL DE EDIÇÃO MENSAL DA EQUIPE ODARA
+      Altere apenas os textos entre aspas para atualizar o site inteiro!
+      ========================================================================
+    -->
     <script>
         const CONFIG_ODARA = {
-            livroMes: {
-                titulo: "Quarto de Despejo",
-                autor: "Carolina Maria de Jesus",
-                descricao: "Um relato forte, sensível e essencial sobre a realidade social, leitura e vivências na periferia de São Paulo."
+            // Instagram
+            instagramUrl: "https://www.instagram.com/odara.osc/",
+
+            // Seção Hero (Apresentação Principal)
+            hero: {
+                badge: "Cultura, Educação e Juventude",
+                tituloParte1: "Transformando realidades através da ",
+                tituloDestaque: "arte e da educação",
+                descricao: "A Odara é uma ONG dedicada a promover e incentivar a cultura, a leitura e o desenvolvimento autônomo para as juventudes brasileiras."
             },
-            lugarMes: {
-                nome: "Museu da Língua Portuguesa",
-                local: "São Paulo, SP",
-                descricao: "Nosso destino inesquecível de projeto! Um espaço vibrante que celebra a diversidade e a potência da nossa língua."
+
+            // Quem Somos, Missão, Visão e Valores
+            sobre: {
+                quemSomosDesc: "Um ecossistema composto por frentes jovens e engajadas em gerar impacto real na sociedade através de frentes colaborativas e multidisciplinares.",
+                missao: "Promover e incentivar a cultura e educação, para as juventudes brasileiras.",
+                visao: "Alcançar os jovens por meio de ações culturais, educativas e de leitura.",
+                valores: [
+                    "Organização",
+                    "Desenvolvimento contínuo",
+                    "Autonomia",
+                    "Respeito à diversidade",
+                    "Atitude protagonista"
+                ]
             },
+
+            // Personagem do Mês
             personagemMes: {
                 mesTema: "Novembro Negro • Representatividade",
                 nome: "Super-Choque",
                 subtitulo: "Representatividade, Força e Inspiração",
                 descricao: "Eu vou dar um choque no seu sistema! Que a história de Virgil Hawkins inspire mais jovens a acenderem sua própria faísca e a transformarem o mundo ao seu redor. Ele é o símbolo perfeito para o mês da Consciência Negra.",
                 imagemPrincipal: "https://picfiles.alphacoders.com/419/thumb-1920-419238.jpg",
-                tag: "Herói & Ícone Cultural"
+                tag: "Herói & Ícone Cultural",
+                motivoDestaque: "A Odara destaca ícones que fortalecem a identidade, autoestima e protagonismo dos jovens das nossas comunidades."
+            },
+
+            // Projetos Realizados (Cards Expansíveis)
+            projetos: [
+                {
+                    id: "proj-1",
+                    categoria: "Cultura & Leitura",
+                    titulo: "Visita ao Museu da Língua Portuguesa",
+                    resumo: "Imersão cultural focada na valorização da nossa língua e história literária.",
+                    detalhes: "Proporcionamos uma experiência transformadora aos jovens, permitindo o contato direto com exposições interativas sobre a evolução da língua portuguesa, promovendo o sentimento de pertencimento e o amor pela leitura."
+                },
+                {
+                    id: "proj-2",
+                    categoria: "Arte & Música",
+                    titulo: "Máquina do Tempo Musical",
+                    resumo: "Oficinas de resgate histórico musical e expressão artística para jovens.",
+                    detalhes: "Feirinha temática interativa desenvolvida de forma colaborativa por todos os setores da Odara. Cada setor construiu uma banquinha retratando uma década da música brasileira, recebendo duas turmas convidadas para uma verdadeira viagem histórica e de apreciação musical."
+                },
+                {
+                    id: "proj-3",
+                    categoria: "Desenvolvimento Humano",
+                    titulo: "Dinâmicas de Empatia no Trabalho",
+                    resumo: "Workshops práticos de inteligência emocional e convivência colaborativa.",
+                    detalhes: "Ação conduzida pelo setor de Recursos Humanos com foco em acolhimento, escuta ativa e fortalecimento dos laços interpessoais entre os integrantes dos setores."
+                }
+            ],
+
+            // Indicações do Mês (Livro e Lugar)
+            livroMes: {
+                titulo: "Quarto de Despejo",
+                autor: "Carolina Maria de Jesus",
+                descricao: "Um relato forte, sensível e essencial sobre a realidade social, leitura e vivências na periferia de São Paulo.",
+                capa: "https://m.media-amazon.com/images/I/41FhgtgeCqL._SY445_SX342_ML2_.jpg"
+            },
+            lugarMes: {
+                nome: "Museu da Língua Portuguesa",
+                local: "São Paulo, SP",
+                descricao: "Nosso destino inesquecível de projeto! Um espaço vibrante que celebra a diversidade e a potência da nossa língua."
             }
         };
     </script>
@@ -60,8 +120,8 @@
             <nav class="hidden md:flex items-center gap-6 font-medium text-sm">
                 <a href="#sobre" class="hover:text-vinho dark:hover:text-mostarda transition">Sobre Nós</a>
                 <a href="#setores" class="hover:text-vinho dark:hover:text-mostarda transition">Setores</a>
-                <a href="#projetos" class="hover:text-vinho dark:hover:text-mostarda transition">Projetos</a>
                 <a href="#personagem" class="hover:text-vinho dark:hover:text-mostarda transition text-vinho dark:text-mostarda font-bold">Personagem do Mês</a>
+                <a href="#projetos" class="hover:text-vinho dark:hover:text-mostarda transition">Projetos</a>
                 <a href="#interativo" class="hover:text-vinho dark:hover:text-mostarda transition">Vibe Cultural</a>
                 <a href="#indicacoes" class="hover:text-vinho dark:hover:text-mostarda transition">Indicações</a>
                 
@@ -71,7 +131,7 @@
                     <svg id="moon-icon" class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
                 </button>
 
-                <a href="https://www.instagram.com/odara.osc/" target="_blank" class="bg-vinho text-white px-5 py-2.5 rounded-full font-semibold shadow-md hover:bg-vinhodark transition">Instagram</a>
+                <a id="nav-insta-btn" href="#" target="_blank" class="bg-vinho text-white px-5 py-2.5 rounded-full font-semibold shadow-md hover:bg-vinhodark transition">Instagram</a>
             </nav>
         </div>
     </header>
@@ -80,13 +140,11 @@
     <section class="pt-32 pb-20 md:pt-44 md:pb-28 px-6 bg-gradient-to-b from-[#f3ede2] to-[#faf8f5] dark:from-[#2b0b0e] dark:to-[#1a0709]">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div class="space-y-6">
-                <span class="inline-block bg-mostarda/20 text-vinho dark:text-mostarda font-bold px-4 py-1.5 rounded-full text-xs tracking-wider uppercase">Cultura, Educação e Juventude</span>
+                <span id="hero-badge" class="inline-block bg-mostarda/20 text-vinho dark:text-mostarda font-bold px-4 py-1.5 rounded-full text-xs tracking-wider uppercase"></span>
                 <h1 class="text-4xl md:text-6xl font-extrabold text-vinhodark dark:text-white leading-tight">
-                    Transformando realidades através da <span class="text-vinho dark:text-mostarda underline decoration-mostarda underline-offset-4">arte e da educação</span>.
+                    <span id="hero-titulo-p1"></span><span id="hero-titulo-destaque" class="text-vinho dark:text-mostarda underline decoration-mostarda underline-offset-4"></span>.
                 </h1>
-                <p class="text-lg text-gray-700 dark:text-gray-300 font-normal leading-relaxed">
-                    A Odara é uma ONG dedicada a promover e incentivar a cultura, a leitura e o desenvolvimento autônomo para as juventudes brasileiras.
-                </p>
+                <p id="hero-desc" class="text-lg text-gray-700 dark:text-gray-300 font-normal leading-relaxed"></p>
                 <div class="flex flex-wrap gap-4 pt-2">
                     <a href="#projetos" class="bg-vinho text-white px-8 py-3.5 rounded-xl font-bold shadow-lg hover:bg-vinhodark transition">
                         Conheça Nossos Projetos
@@ -114,10 +172,9 @@
         <div class="max-w-7xl mx-auto space-y-16">
             <div class="text-center max-w-2xl mx-auto space-y-4">
                 <h2 class="text-3xl md:text-4xl font-extrabold text-vinhodark dark:text-white">Quem Somos</h2>
-                <p class="text-gray-600 dark:text-gray-300">Um ecossistema composto por frentes jovens e engajadas em gerar impacto real na sociedade através de frentes colaborativas e multidisciplinares.</p>
+                <p id="sobre-desc" class="text-gray-600 dark:text-gray-300"></p>
             </div>
 
-            <!-- MVV Cards -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Missão -->
                 <div class="bg-[#faf8f5] dark:bg-[#2b0b0e] p-8 rounded-2xl border-t-4 border-vinho shadow-sm space-y-4">
@@ -125,7 +182,7 @@
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
                     </div>
                     <h3 class="text-xl font-bold text-vinhodark dark:text-white">Missão</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">Promover e incentivar a cultura e educação, para as juventudes brasileiras.</p>
+                    <p id="mvv-missao" class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed"></p>
                 </div>
                 <!-- Visão -->
                 <div class="bg-[#faf8f5] dark:bg-[#2b0b0e] p-8 rounded-2xl border-t-4 border-mostarda shadow-sm space-y-4">
@@ -133,7 +190,7 @@
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
                     </div>
                     <h3 class="text-xl font-bold text-vinhodark dark:text-white">Visão</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">Alcançar os jovens por meio de ações culturais, educativas e de leitura.</p>
+                    <p id="mvv-visao" class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed"></p>
                 </div>
                 <!-- Valores -->
                 <div class="bg-[#faf8f5] dark:bg-[#2b0b0e] p-8 rounded-2xl border-t-4 border-vinhodark dark:border-vinho shadow-sm space-y-4">
@@ -141,13 +198,7 @@
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                     </div>
                     <h3 class="text-xl font-bold text-vinhodark dark:text-white">Valores</h3>
-                    <ul class="text-gray-600 dark:text-gray-300 text-sm space-y-2">
-                        <li>• Organização</li>
-                        <li>• Desenvolvimento contínuo</li>
-                        <li>• Autonomia</li>
-                        <li>• Respeito à diversidade</li>
-                        <li>• Atitude protagonista</li>
-                    </ul>
+                    <ul id="mvv-valores-list" class="text-gray-600 dark:text-gray-300 text-sm space-y-2"></ul>
                 </div>
             </div>
         </div>
@@ -189,50 +240,49 @@
         </div>
     </section>
 
-    <!-- SECÇÃO: Personagem do Mês -->
+    <!-- Personagem do Mês -->
     <section id="personagem" class="py-20 px-6 bg-gradient-to-r from-vinho via-vinhodark to-[#1a0709] text-white">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            
-            <!-- Imagem do Miles Morales -->
             <div class="relative flex justify-center order-2 md:order-1">
                 <div class="w-72 h-96 md:w-80 md:h-[450px] rounded-3xl overflow-hidden shadow-2xl border-4 border-mostarda relative group">
-                    <img id="pers-img" src="" alt="Miles Morales" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <img id="pers-img" src="" alt="Personagem do Mês" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-                    <span id="pers-tag" class="absolute bottom-4 left-4 bg-mostarda text-vinhodark text-xs font-extrabold px-3 py-1.5 rounded-full uppercase tracking-wider">
-                        Representatividade
-                    </span>
+                    <span id="pers-tag" class="absolute bottom-4 left-4 bg-mostarda text-vinhodark text-xs font-extrabold px-3 py-1.5 rounded-full uppercase tracking-wider"></span>
                 </div>
             </div>
-
-            <!-- Conteúdo Textual -->
             <div class="space-y-6 order-1 md:order-2">
                 <div class="space-y-2">
-                    <span id="pers-mes" class="text-xs font-extrabold text-mostarda uppercase tracking-widest bg-white/10 px-3 py-1 rounded-full border border-mostarda/30">
-                        Novembro Negro
-                    </span>
-                    <h2 id="pers-nome" class="text-4xl md:text-5xl font-black text-white tracking-tight">
-                        Miles Morales
-                    </h2>
-                    <h3 id="pers-subtitulo" class="text-lg font-medium text-gray-300">
-                        O Homem-Aranha que inspirou uma geração
-                    </h3>
+                    <span id="pers-mes" class="text-xs font-extrabold text-mostarda uppercase tracking-widest bg-white/10 px-3 py-1 rounded-full border border-mostarda/30"></span>
+                    <h2 id="pers-nome" class="text-4xl md:text-5xl font-black text-white tracking-tight"></h2>
+                    <h3 id="pers-subtitulo" class="text-lg font-medium text-gray-300"></h3>
                 </div>
 
-                <p id="pers-desc" class="text-gray-200 text-sm md:text-base leading-relaxed font-normal">
-                    Miles representa a força da juventude negra, mostrando que qualquer jovem de periferia, com as suas raízes e cultura, pode ser o herói da sua própria história. Trazendo o hip-hop, a arte urbana e a diversidade para as grandes telas, ele é o símbolo perfeito para o mês da Consciência Negra.
-                </p>
+                <p id="pers-desc" class="text-gray-200 text-sm md:text-base leading-relaxed font-normal"></p>
 
                 <div class="p-4 bg-white/5 border border-white/10 rounded-2xl flex items-center gap-4">
                     <div class="w-10 h-10 rounded-full bg-mostarda/20 text-mostarda flex items-center justify-center font-bold text-lg shrink-0">✨</div>
                     <p class="text-xs text-gray-300">
-                        <strong>Porquê este personagem?</strong> A Odara destaca ícones que fortalecem a identidade, autoestima e protagonismo dos jovens das nossas comunidades.
+                        <strong>Porquê este personagem?</strong> <span id="pers-motivo"></span>
                     </p>
                 </div>
             </div>
-
         </div>
     </section>
-<!-- Espaço Interativo (Vibe Cultural) -->
+
+    <!-- Projetos Realizados -->
+    <section id="projetos" class="py-20 px-6 bg-white dark:bg-[#20090c]">
+        <div class="max-w-7xl mx-auto space-y-12">
+            <div class="text-center max-w-2xl mx-auto space-y-4">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-vinhodark dark:text-white">Projetos Realizados</h2>
+                <p class="text-gray-600 dark:text-gray-300">Clique nos cards para expandir e conhecer mais detalhes de nossas iniciativas.</p>
+            </div>
+
+            <!-- Container Dinâmico de Projetos -->
+            <div id="projetos-container" class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch"></div>
+        </div>
+    </section>
+
+    <!-- Espaço Interativo (Vibe Cultural) -->
     <section id="interativo" class="py-20 px-6 bg-[#faf8f5] dark:bg-[#1a0709]">
         <div class="max-w-4xl mx-auto bg-white dark:bg-[#2b0b0e] border border-vinho/10 dark:border-white/10 rounded-3xl p-8 md:p-12 shadow-sm text-center space-y-8">
             <div class="space-y-3">
@@ -260,68 +310,6 @@
         </div>
     </section>
 
-    <!-- Projetos Realizados -->
-    <section id="projetos" class="py-20 px-6 bg-white dark:bg-[#20090c]">
-        <div class="max-w-7xl mx-auto space-y-12">
-            <div class="text-center max-w-2xl mx-auto space-y-4">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-vinhodark dark:text-white">Projetos Realizados</h2>
-                <p class="text-gray-600 dark:text-gray-300">Clique nos cards para expandir e conhecer mais detalhes de nossas iniciativas.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-                <!-- Card 1 -->
-                <div onclick="toggleProjeto('proj-1')" class="cursor-pointer bg-[#faf8f5] dark:bg-[#2b0b0e] p-8 rounded-3xl border border-gray-200 dark:border-white/10 hover:border-vinho transition flex flex-col justify-between h-full min-h-[220px]">
-                    <div class="space-y-4">
-                        <div class="flex justify-between items-center">
-                            <span class="text-xs font-bold text-mostarda uppercase tracking-wider">Cultura & Leitura</span>
-                            <svg id="arrow-proj-1" class="w-5 h-5 text-vinho dark:text-mostarda transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-vinhodark dark:text-white">Visita ao Museu da Língua Portuguesa</h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-300">Imersão cultural focada na valorização da nossa língua e história literária.</p>
-                    </div>
-                    
-                    <div id="content-proj-1" class="hidden pt-4 mt-4 border-t border-gray-200 dark:border-white/10 text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
-                        Proporcionamos uma experiência transformadora aos jovens, permitindo o contato direto com exposições interativas sobre a evolução da língua portuguesa, promovendo o sentimento de pertencimento e o amor pela leitura.
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div onclick="toggleProjeto('proj-2')" class="cursor-pointer bg-[#faf8f5] dark:bg-[#2b0b0e] p-8 rounded-3xl border border-gray-200 dark:border-white/10 hover:border-vinho transition flex flex-col justify-between h-full min-h-[220px]">
-                    <div class="space-y-4">
-                        <div class="flex justify-between items-center">
-                            <span class="text-xs font-bold text-mostarda uppercase tracking-wider">Arte & Música</span>
-                            <svg id="arrow-proj-2" class="w-5 h-5 text-vinho dark:text-mostarda transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-vinhodark dark:text-white">Máquina do Tempo Musical</h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-300">Oficinas de resgate histórico musical e expressão artística para jovens.</p>
-                    </div>
-                    
-                    <div id="content-proj-2" class="hidden pt-4 mt-4 border-t border-gray-200 dark:border-white/10 text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
-                        Feirinha temática interativa desenvolvida de forma colaborativa por todos os setores da Odara. Cada setor construiu uma banquinha retratando uma década da música brasileira, recebendo duas turmas convidadas para uma verdadeira viagem histórica e de apreciação musical.
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div onclick="toggleProjeto('proj-3')" class="cursor-pointer bg-[#faf8f5] dark:bg-[#2b0b0e] p-8 rounded-3xl border border-gray-200 dark:border-white/10 hover:border-vinho transition flex flex-col justify-between h-full min-h-[220px]">
-                    <div class="space-y-4">
-                        <div class="flex justify-between items-center">
-                            <span class="text-xs font-bold text-mostarda uppercase tracking-wider">Desenvolvimento Humano</span>
-                            <svg id="arrow-proj-3" class="w-5 h-5 text-vinho dark:text-mostarda transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-vinhodark dark:text-white">Dinâmicas de Empatia no Trabalho</h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-300">Workshops práticos de inteligência emocional e convivência colaborativa.</p>
-                    </div>
-                    
-                    <div id="content-proj-3" class="hidden pt-4 mt-4 border-t border-gray-200 dark:border-white/10 text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
-                        Ação conduzida pelo setor de Recursos Humanos com foco em acolhimento, escuta ativa e fortalecimento dos laços interpessoais entre os integrantes dos setores.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-
     <!-- Indicações Mensais -->
     <section id="indicacoes" class="py-20 px-6 bg-white dark:bg-[#20090c]">
         <div class="max-w-7xl mx-auto space-y-12">
@@ -332,28 +320,28 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Card Livro -->
-                <div class="bg-[#faf8f5] dark:bg-[#2b0b0e] p-8 rounded-3xl border border-gray-100 dark:border-white/5 flex gap-6 items-center">
-                    <div class="w-20 h-28 bg-vinho/10 rounded-xl flex items-center justify-center text-vinho dark:text-mostarda shrink-0">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                <div class="bg-[#faf8f5] dark:bg-[#2b0b0e] p-8 rounded-3xl border border-gray-100 dark:border-white/5 flex flex-col sm:flex-row gap-6 items-center">
+                    <div class="w-24 h-36 rounded-xl overflow-hidden shadow-md shrink-0 border border-vinho/10 bg-vinho/10">
+                        <img id="img-livro-capa" src="" alt="Capa do Livro" class="w-full h-full object-cover">
                     </div>
-                    <div class="space-y-2">
+                    <div class="space-y-2 text-center sm:text-left">
                         <span class="text-xs font-bold text-mostarda uppercase tracking-wider">Livro do Mês</span>
-                        <h3 class="text-xl font-bold text-vinhodark dark:text-white" id="lbl-livro-titulo">Quarto de Despejo</h3>
-                        <p class="text-sm font-semibold text-gray-500 dark:text-gray-400" id="lbl-livro-autor">Por Carolina Maria de Jesus</p>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed" id="lbl-livro-desc">Um relato forte, sensível e essencial sobre a realidade social, leitura e vivências na periferia de São Paulo.</p>
+                        <h3 class="text-xl font-bold text-vinhodark dark:text-white" id="lbl-livro-titulo"></h3>
+                        <p class="text-sm font-semibold text-gray-500 dark:text-gray-400" id="lbl-livro-autor"></p>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed" id="lbl-livro-desc"></p>
                     </div>
                 </div>
 
                 <!-- Card Lugar -->
-                <div class="bg-[#faf8f5] dark:bg-[#2b0b0e] p-8 rounded-3xl border border-gray-100 dark:border-white/5 flex gap-6 items-center">
+                <div class="bg-[#faf8f5] dark:bg-[#2b0b0e] p-8 rounded-3xl border border-gray-100 dark:border-white/5 flex flex-col sm:flex-row gap-6 items-center">
                     <div class="w-20 h-28 bg-mostarda/20 rounded-xl flex items-center justify-center text-vinhodark dark:text-mostarda shrink-0">
                         <svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                     </div>
-                    <div class="space-y-2">
+                    <div class="space-y-2 text-center sm:text-left">
                         <span class="text-xs font-bold text-vinho dark:text-mostarda uppercase tracking-wider">Lugar do Mês</span>
-                        <h3 class="text-xl font-bold text-vinhodark dark:text-white" id="lbl-lugar-nome">Museu da Língua Portuguesa</h3>
-                        <p class="text-sm font-semibold text-gray-500 dark:text-gray-400" id="lbl-lugar-local">São Paulo, SP</p>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed" id="lbl-lugar-desc">Nosso destino inesquecível de projeto! Um espaço vibrante que celebra a diversidade e a potência da nossa língua.</p>
+                        <h3 class="text-xl font-bold text-vinhodark dark:text-white" id="lbl-lugar-nome"></h3>
+                        <p class="text-sm font-semibold text-gray-500 dark:text-gray-400" id="lbl-lugar-local"></p>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed" id="lbl-lugar-desc"></p>
                     </div>
                 </div>
             </div>
@@ -368,33 +356,86 @@
                 <span class="text-xl font-extrabold tracking-tight">ODARA OSC</span>
             </div>
             <p class="text-sm text-gray-400 text-center">Promovendo e incentivando a cultura e educação para as juventudes brasileiras.</p>
-            <a href="https://www.instagram.com/odara.osc/" target="_blank" class="text-mostarda hover:underline text-sm font-semibold">@odara.osc</a>
+            <a id="footer-insta-btn" href="#" target="_blank" class="text-mostarda hover:underline text-sm font-semibold">@odara.osc</a>
         </div>
         <div class="max-w-7xl mx-auto pt-8 text-center text-xs text-gray-500">
             &copy; 2026 Odara OSC. Todos os direitos reservados.
         </div>
     </footer>
 
-    <!-- Lógica JavaScript -->
+    <!-- Lógica de Preenchimento Dinâmico Automático -->
     <script>
-        // Carregamento dos Dados do Personagem do Mês
+        // 1. Links de Instagram
+        document.getElementById('nav-insta-btn').href = CONFIG_ODARA.instagramUrl;
+        document.getElementById('footer-insta-btn').href = CONFIG_ODARA.instagramUrl;
+
+        // 2. Preenchimento Hero
+        document.getElementById('hero-badge').innerText = CONFIG_ODARA.hero.badge;
+        document.getElementById('hero-titulo-p1').innerText = CONFIG_ODARA.hero.tituloParte1;
+        document.getElementById('hero-titulo-destaque').innerText = CONFIG_ODARA.hero.tituloDestaque;
+        document.getElementById('hero-desc').innerText = CONFIG_ODARA.hero.descricao;
+
+        // 3. Preenchimento Quem Somos & MVV
+        document.getElementById('sobre-desc').innerText = CONFIG_ODARA.sobre.quemSomosDesc;
+        document.getElementById('mvv-missao').innerText = CONFIG_ODARA.sobre.missao;
+        document.getElementById('mvv-visao').innerText = CONFIG_ODARA.sobre.visao;
+        
+        const valoresList = document.getElementById('mvv-valores-list');
+        CONFIG_ODARA.sobre.valores.forEach(item => {
+            const li = document.createElement('li');
+            li.innerText = "• " + item;
+            valoresList.appendChild(li);
+        });
+
+        // 4. Preenchimento Personagem do Mês
         document.getElementById('pers-mes').innerText = CONFIG_ODARA.personagemMes.mesTema;
         document.getElementById('pers-nome').innerText = CONFIG_ODARA.personagemMes.nome;
         document.getElementById('pers-subtitulo').innerText = CONFIG_ODARA.personagemMes.subtitulo;
         document.getElementById('pers-desc').innerText = CONFIG_ODARA.personagemMes.descricao;
         document.getElementById('pers-img').src = CONFIG_ODARA.personagemMes.imagemPrincipal;
         document.getElementById('pers-tag').innerText = CONFIG_ODARA.personagemMes.tag;
+        document.getElementById('pers-motivo').innerText = CONFIG_ODARA.personagemMes.motivoDestaque;
 
-        // Alternar Dark Mode
+        // 5. Preenchimento dos Projetos Realizados (Cards Uniformes)
+        const projContainer = document.getElementById('projetos-container');
+        CONFIG_ODARA.projetos.forEach(proj => {
+            const card = document.createElement('div');
+            card.onclick = () => toggleProjeto(proj.id);
+            card.className = "cursor-pointer bg-[#faf8f5] dark:bg-[#2b0b0e] p-8 rounded-3xl border border-gray-200 dark:border-white/10 hover:border-vinho transition flex flex-col justify-between h-full min-h-[220px]";
+            card.innerHTML = `
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs font-bold text-mostarda uppercase tracking-wider">${proj.categoria}</span>
+                        <svg id="arrow-${proj.id}" class="w-5 h-5 text-vinho dark:text-mostarda transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-vinhodark dark:text-white">${proj.titulo}</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">${proj.resumo}</p>
+                </div>
+                <div id="content-${proj.id}" class="hidden pt-4 mt-4 border-t border-gray-200 dark:border-white/10 text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
+                    ${proj.detalhes}
+                </div>
+            `;
+            projContainer.appendChild(card);
+        });
+
+        // 6. Preenchimento das Indicações
+        document.getElementById('img-livro-capa').src = CONFIG_ODARA.livroMes.capa;
+        document.getElementById('lbl-livro-titulo').innerText = CONFIG_ODARA.livroMes.titulo;
+        document.getElementById('lbl-livro-autor').innerText = "Por " + CONFIG_ODARA.livroMes.autor;
+        document.getElementById('lbl-livro-desc').innerText = CONFIG_ODARA.livroMes.descricao;
+
+        document.getElementById('lbl-lugar-nome').innerText = CONFIG_ODARA.lugarMes.nome;
+        document.getElementById('lbl-lugar-local').innerText = CONFIG_ODARA.lugarMes.local;
+        document.getElementById('lbl-lugar-desc').innerText = CONFIG_ODARA.lugarMes.descricao;
+
+        // Funções de Interatividade
         function toggleDarkMode() {
             document.documentElement.classList.toggle('dark');
         }
 
-        // Expandir Cards de Projeto Individualmente
         function toggleProjeto(id) {
             const content = document.getElementById(`content-${id}`);
             const arrow = document.getElementById(`arrow-${id}`);
-            
             if (content.classList.contains('hidden')) {
                 content.classList.remove('hidden');
                 arrow.classList.add('rotate-180');
@@ -404,7 +445,6 @@
             }
         }
 
-        // Botões da Vibe Cultural
         function mudarVibe(tipo) {
             const titulo = document.getElementById('vibe-titulo');
             const texto = document.getElementById('vibe-texto');
