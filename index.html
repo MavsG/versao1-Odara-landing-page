@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Odara OSC | Cultura, Educação e Juventudes</title>
+    <title>Odara OSC | Cultura</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -141,6 +141,33 @@
                 motivoDestaque: "A Odara destaca ícones que fortalecem a identidade, autoestima e protagonismo dos jovens das nossas comunidades."
             },
 
+            pesquisaMes: {
+                mesTema: "Pesquisa Odara",
+                titulo: "Curiosidades Da Arte",
+                introducao: "A Odara reconhece a importância da arte e da cultura para a sociedade. Pinturas, obras de arte, artes visuais e museus contribuem para preservar a história, valorizar a diversidade cultural e ampliar conhecimentos.",
+                bloco1Titulo: "Importância da Arte na Sociedade",
+                bloco1Texto: "A arte é uma das principais formas de expressão humana, permitindo transmitir sentimentos, ideias e experiências. Presente em todas as sociedades, ela desempenha um papel fundamental na construção da identidade cultural, preservação de tradições e no desenvolvimento social.",
+                bloco2Titulo: "Artes Visuais e Museus",
+                bloco2Texto: "As artes visuais utilizam elementos como cores, linhas e texturas para transmitir mensagens. Já os museus são espaços dedicados à preservação e valorização desse patrimônio, estimulando a educação, a memória cultural e o acesso a diferentes perspectivas do mundo.",
+                museus: [
+                    {
+                        nome: "Museu da Língua Portuguesa",
+                        endereco: "Praça da Luz, s/nº - Centro Histórico de São Paulo, São Paulo - SP",
+                        link: "https://www.museudalinguaportuguesa.org.br/visite/horarios-e-ingressos/"
+                    },
+                    {
+                        nome: "Museu Catavento",
+                        endereco: "Avenida Mercúrio, Parque Dom Pedro II, S/N - Brás, São Paulo - SP",
+                        link: "https://www.museucatavento.org.br/horarios-e-precos"
+                    },
+                    {
+                        nome: "Museu do Ipiranga",
+                        endereco: "R. Dos Patriotas, 100 - Ipiranga, São Paulo - SP",
+                        link: "https://museudoipiranga.org.br/visite/"
+                    }
+                ]
+            },
+
             projetos: [
                 {
                     id: "proj-1",
@@ -165,7 +192,7 @@
                 }
             ],
 
-           livroMes: {
+            livroMes: {
                 titulo: "Quarto de Despejo",
                 autor: "Carolina Maria de Jesus",
                 descricao: "Um relato forte, sensível e essencial sobre a realidade social, leitura e vivências na periferia de São Paulo.",
@@ -371,53 +398,31 @@
         </div>
     </section>
 
-    <!-- Seção: A Arte que Transforma -->
+    <!-- Seção: A Arte que Transforma (Dinâmica via Script) -->
     <section id="arte-transforma" class="py-20 px-6 bg-white dark:bg-[#20090c]">
         <div class="max-w-7xl mx-auto space-y-12">
             <div class="text-center max-w-3xl mx-auto space-y-4">
-                <span class="bg-mostarda/20 text-vinho dark:text-mostarda font-bold px-4 py-1.5 rounded-full text-xs tracking-wider uppercase">Pesquisa Odara</span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-vinhodark dark:text-white">Curiosidades Da Arte</h2>
-                <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base leading-relaxed">
-                    A Odara reconhece a importância da arte e da cultura para a sociedade. Pinturas, obras de arte, artes visuais e museus contribuem para preservar a história, valorizar a diversidade cultural e ampliar conhecimentos.
-                </p>
+                <span id="pesquisa-tag" class="bg-mostarda/20 text-vinho dark:text-mostarda font-bold px-4 py-1.5 rounded-full text-xs tracking-wider uppercase"></span>
+                <h2 id="pesquisa-titulo" class="text-3xl md:text-4xl font-extrabold text-vinhodark dark:text-white"></h2>
+                <p id="pesquisa-intro" class="text-gray-600 dark:text-gray-300 text-sm md:text-base leading-relaxed"></p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div class="bg-[#faf8f5] dark:bg-[#2b0b0e] p-8 rounded-3xl border border-gray-100 dark:border-white/5 space-y-4">
-                    <h3 class="text-xl font-bold text-vinhodark dark:text-white">Importância da Arte na Sociedade</h3>
-                    <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                        A arte é uma das principais formas de expressão humana, permitindo transmitir sentimentos, ideias e experiências. Presente em todas as sociedades, ela desempenha um papel fundamental na construção da identidade cultural, preservação de tradições e no desenvolvimento social.
-                    </p>
+                    <h3 id="pesquisa-b1-tit" class="text-xl font-bold text-vinhodark dark:text-white"></h3>
+                    <p id="pesquisa-b1-txt" class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed"></p>
                 </div>
 
                 <div class="bg-[#faf8f5] dark:bg-[#2b0b0e] p-8 rounded-3xl border border-gray-100 dark:border-white/5 space-y-4">
-                    <h3 class="text-xl font-bold text-vinhodark dark:text-white">Artes Visuais e Museus</h3>
-                    <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                        As artes visuais utilizam elementos como cores, linhas e texturas para transmitir mensagens. Já os museus são espaços dedicados à preservação e valorização desse patrimônio, estimulando a educação, a memória cultural e o acesso a diferentes perspectivas do mundo.
-                    </p>
+                    <h3 id="pesquisa-b2-tit" class="text-xl font-bold text-vinhodark dark:text-white"></h3>
+                    <p id="pesquisa-b2-txt" class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed"></p>
                 </div>
             </div>
 
             <!-- Museus Recomendados -->
             <div class="space-y-6 pt-6">
-                <h3 class="text-2xl font-bold text-vinhodark dark:text-white text-center">Espaços Culturais para Visitar em São Paulo</h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="bg-[#faf8f5] dark:bg-[#2b0b0e] p-6 rounded-2xl border border-vinho/10 space-y-3">
-                        <h4 class="font-bold text-vinho dark:text-mostarda">Museu da Língua Portuguesa</h4>
-                        <p class="text-xs text-gray-600 dark:text-gray-300">Praça da Luz, s/nº - Centro Histórico de São Paulo, São Paulo - SP.</p>
-                        <a href="https://www.museudalinguaportuguesa.org.br/visite/horarios-e-ingressos/" target="_blank" class="inline-block text-xs font-bold text-vinho dark:text-mostarda hover:underline">Ver Horários e Ingressos </a>
-                    </div>
-                    <div class="bg-[#faf8f5] dark:bg-[#2b0b0e] p-6 rounded-2xl border-vinho/10 border space-y-3">
-                        <h4 class="font-bold text-vinho dark:text-mostarda">Museu Catavento</h4>
-                        <p class="text-xs text-gray-600 dark:text-gray-300">Avenida Mercúrio, Parque Dom Pedro II, S/N - Brás, São Paulo - SP.</p>
-                        <a href="https://www.museucatavento.org.br/horarios-e-precos" target="_blank" class="inline-block text-xs font-bold text-vinho dark:text-mostarda hover:underline">Ver Horários e Preços </a>
-                    </div>
-                    <div class="bg-[#faf8f5] dark:bg-[#2b0b0e] p-6 rounded-2xl border border-vinho/10 space-y-3">
-                        <h4 class="font-bold text-vinho dark:text-mostarda">Museu do Ipiranga</h4>
-                        <p class="text-xs text-gray-600 dark:text-gray-300">R. Dos Patriotas, 100 - Ipiranga, São Paulo - SP.</p>
-                        <a href="https://museudoipiranga.org.br/visite/" target="_blank" class="inline-block text-xs font-bold text-vinho dark:text-mostarda hover:underline">Visite o Museu do Ipiranga </a>
-                    </div>
-                </div>
+                <h3 class="text-2xl font-bold text-vinhodark dark:text-white text-center">Espaços Culturais Recomendados</h3>
+                <div id="museus-container" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
             </div>
         </div>
     </section>
@@ -544,6 +549,27 @@
         document.getElementById('pers-img').src = CONFIG_ODARA.personagemMes.imagemPrincipal;
         document.getElementById('pers-tag').innerText = CONFIG_ODARA.personagemMes.tag;
         document.getElementById('pers-motivo').innerText = CONFIG_ODARA.personagemMes.motivoDestaque;
+
+        // Preenchimento Dinâmico da Pesquisa
+        document.getElementById('pesquisa-tag').innerText = CONFIG_ODARA.pesquisaMes.mesTema;
+        document.getElementById('pesquisa-titulo').innerText = CONFIG_ODARA.pesquisaMes.titulo;
+        document.getElementById('pesquisa-intro').innerText = CONFIG_ODARA.pesquisaMes.introducao;
+        document.getElementById('pesquisa-b1-tit').innerText = CONFIG_ODARA.pesquisaMes.bloco1Titulo;
+        document.getElementById('pesquisa-b1-txt').innerText = CONFIG_ODARA.pesquisaMes.bloco1Texto;
+        document.getElementById('pesquisa-b2-tit').innerText = CONFIG_ODARA.pesquisaMes.bloco2Titulo;
+        document.getElementById('pesquisa-b2-txt').innerText = CONFIG_ODARA.pesquisaMes.bloco2Texto;
+
+        const museusContainer = document.getElementById('museus-container');
+        CONFIG_ODARA.pesquisaMes.museus.forEach(museu => {
+            const card = document.createElement('div');
+            card.className = "bg-[#faf8f5] dark:bg-[#2b0b0e] p-6 rounded-2xl border border-vinho/10 space-y-3";
+            card.innerHTML = `
+                <h4 class="font-bold text-vinho dark:text-mostarda">${museu.nome}</h4>
+                <p class="text-xs text-gray-600 dark:text-gray-300">${museu.endereco}</p>
+                <a href="${museu.link}" target="_blank" class="inline-block text-xs font-bold text-vinho dark:text-mostarda hover:underline">Ver Horários e Ingressos →</a>
+            `;
+            museusContainer.appendChild(card);
+        });
 
         const projContainer = document.getElementById('projetos-container');
         CONFIG_ODARA.projetos.forEach(proj => {
